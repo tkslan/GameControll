@@ -6,6 +6,8 @@ namespace Game
 {
     public class GameState : MonoBehaviour, IGameState
     {
+        public State GetState { get { return currentState; } }
+
         public delegate void StateDelegate(State gameState, EndGameReason reason, int execOrder = -1);
 
         private static List<StateDelegate> StateDelegatesList;
